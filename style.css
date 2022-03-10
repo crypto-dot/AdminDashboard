@@ -1,25 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
 body,html {
     margin: 0;
     border: 0;
     padding: 0;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 body {
     height:  100vh;
+    font-family: "Rubik", san-serif;
     display: grid;
-    grid-template-columns: 1fr 5.5fr;
+    grid-template-columns: max(300px,20%);
     grid-template-rows: 1fr;
 }
 .container-left-hand{
-    grid-column: 1 / 2;
-    grid-row: 1 /2;
-    background-color: rgb(74, 168, 255);
+    box-shadow: 2px 2px 5px rgb(148, 148, 148);
+
+    background: linear-gradient(0deg, rgba(0,140,255,1) 25%,  rgba(79,177,237,1) 73%);
     display: flex;
     gap: clamp(25px, 5vh, 70px);
     flex-direction: column;
 }
 .container-right-hand{
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
 }
 
 ul {
@@ -37,6 +41,7 @@ a:hover {
     color:rgb(53, 53, 61);
 }
 a{
+
     text-decoration: none;
     color: black;
 }
@@ -55,15 +60,83 @@ a{
 }
 input {
     border-radius: 15px;
-    width: clamp(150px,30vw,600px);
+    padding-left: 10px;
+    width: clamp(150px,40vw,700px);
     height: clamp(10px,3vh,30px);
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgba(177, 177, 177, 0.37);
     border-style: none;
     font-size: 20px;
 }
 .header {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    grid-row: 1 / 2;
+    box-shadow: 5px 5px 5px rgb(148, 148, 148);
     padding-left: clamp(50px,10vw,100px);
     padding-right: clamp(50px,10vw,100px);
-    padding-top: clamp(5px,3vh,30px);
-    padding-bottom: clamp(5px,3vh,30px);
+    padding-top: clamp(3px,2vh,15px);
+    padding-bottom: clamp(3px,2vh,15px);
+}
+.upperContainer {
+    display: flex;
+    gap:15px;
+}
+.lowerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form {
+    display: flex;
+    align-items: center;
+}
+.userpfpContainer{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    margin-left: clamp(15px,5vw,100px);
+}
+img {
+    align-self: center;
+}
+.profilePic {
+    background-color: red;
+    border-style: solid;
+    border-radius: 50px;
+    height: 60px;
+    width: 65px;
+}
+.username {
+    font-size: 1rem;
+}
+small {
+    font-size: 0.7rem;
+}
+.userGreetingContainer {
+    display: flex;
+    gap: 15px;
+}
+.userTextGreetingContainer {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.buttonSocials {
+    width:150px;
+    height:45px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgba(0,140,255,1);
+}
+.buttonSocials:hover {
+
+}
+.buttonContainer{
+    display: flex;
+    gap: 15px;
 }
