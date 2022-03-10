@@ -70,13 +70,13 @@ input {
 .header {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     grid-row: 1 / 2;
     box-shadow: 5px 5px 5px rgb(148, 148, 148);
     padding-left: clamp(50px,10vw,100px);
     padding-right: clamp(50px,10vw,100px);
-    padding-top: clamp(3px,2vh,15px);
-    padding-bottom: clamp(3px,2vh,15px);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 .upperContainer {
     display: flex;
@@ -139,10 +139,14 @@ small {
 }
 .projectsContainer {
     display: grid;
+    grid-template-columns: repeat(2, minmax(150px,1fr));
+    grid-template-rows: 25px repeat(3, minmax(150px,1fr));
+    gap:15px;
+
 
 }
 .mainContentContainer {
-    padding: 30px 30px 0 0;
+    padding: 30px 15px 15px 30px;
     display: grid;
     background-color: rgba(219, 219, 219, 0.486);
     box-shadow: 10px 10px 10px rgb(148, 148, 148);
@@ -170,7 +174,7 @@ h3 {
      overflow: scroll;
 }
 .annoucements,.trending {
-    background-color: rgb(199, 199, 199);
+    background-color: rgba(243, 243, 243, 0.623);
     box-shadow: 5px 5px 10px rgb(163, 162, 162);
     border-radius: 10%;
     width: clamp(50px,15vw,300px);
@@ -180,15 +184,6 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: max(45px,5vh);
-}
-.break {
-
-    background-color: black;
-    border-radius: 15%;
-    height: 2px;
-    width: 150px;
-    align-self: center;
-
 }
 .trending {
     display: flex;
@@ -206,4 +201,53 @@ h3 {
 }
 #pic4 {
     background-color: royalblue;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(243, 243, 243, 0.623);
+    box-shadow: 5px 5px 10px rgb(163, 162, 162);
+    border-radius: 10%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.projects-title {
+    grid-column: 1 / 3;
+}
+.projects:hover {
+    background-color: rgba(207, 207, 207, 0.623);;
+}
+.project-title {
+    font-size: 1rem;
+    text-align: center;
+}
+.project-title-container {
+    background-color: rgba(0,140,255,1);
+    border-left: solid 10px rgb(19, 55, 85);
+}
+.project-description {
+    font-size: 0.8rem;
+}
+.project-description-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.trendingIndividuals{
+    display: flex;
+    gap:15px;
+    align-items: center;
+}
+.usernameWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.usernameTrending {
+    font-size: 0.6rem;
+    margin: 0;
+}
+.usernameDescription {
+    font-size: 0.6rem;
+    margin:0;
+    font-weight: 100;
 }
